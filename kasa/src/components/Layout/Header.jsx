@@ -14,7 +14,7 @@ const Header = () => {
                         <NavLink
                             className={({ isActive }) => (isActive ? 'header_nav_link_navlink header_nav_link_active' : 'header_nav_link_navlink header_nav_link_inactive')}
                             title='Accueil'
-                            end to='/home'
+                            to='/'
                         >
                             Accueil
                         </NavLink>
@@ -23,7 +23,7 @@ const Header = () => {
                         <NavLink
                             className={({ isActive }) => (isActive ? 'header_nav_link_navlink header_nav_link_active' : 'header_nav_link_navlink header_nav_link_inactive')}
                             title='À propos'
-                            end to='/about'
+                            to='/about'
                         >
                             À propos
                         </NavLink>

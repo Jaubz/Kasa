@@ -1,9 +1,9 @@
-import './App.css';
-import './styles/sass/Header.scss'
+import './styles/sass/main.scss'
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Home from './pages/Home';
 import About from './pages/About';
 import Logement from './pages/Logement';
+import NoMatch from './pages/NoMatch';
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/logement/:id" element={<Logement/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="*" element={<NoMatch/>}/>
       </Routes>
     </BrowserRouter>
   );
