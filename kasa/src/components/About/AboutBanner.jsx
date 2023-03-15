@@ -5,7 +5,6 @@ import bannerAbout from '../../assets/bannerAbout-kasa.png'
 const BannerAbout = () => {
     return(
         <Banner
-            title='À propos'
             src={bannerAbout}
         />
     )

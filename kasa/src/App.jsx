@@ -2,7 +2,7 @@ import './styles/sass/main.scss'
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Home from './pages/Home';
 import About from './pages/About';
-import Logement from './pages/Logement';
+import Logement from './pages/Housing';
 import NoMatch from './pages/NoMatch';
 
 

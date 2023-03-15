@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../fonts/Montserrat-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+}
 @media (max-width: 768px) {
   .header {
     width: 98% !important;
@@ -30,24 +38,31 @@
 .header_nav_link {
   font-size: 19px;
   margin: 1rem 0.5rem;
+  color: #ff5656;
 }
 .header_nav_link_navlink {
   padding: 0.2rem 0.7rem;
+  text-decoration: none;
 }
 .header_nav_link_active {
   font-family: "Montserrat-Medium";
   background: hsla(0, 100%, 82%, 0.2);
   border-radius: 0.3rem;
   padding: 0.2rem 0.7rem;
+  text-decoration: underline;
+  color: #ff5656;
 }
 .header_nav_link_inactive {
   transition: all 350ms ease-in-out;
+  text-decoration: none;
+  color: #ff5656;
 }
 .header_nav_link_inactive:hover {
   font-family: "Montserrat-Medium";
   background: hsla(0, 100%, 82%, 0.2);
   border-radius: 0.3rem;
   padding: 0.2rem 0.7rem;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -141,10 +156,12 @@
 .housing_page_header_infos_title {
   font-size: 35px;
   margin: 0;
+  color: #ff5656;
 }
 .housing_page_header_infos_subtitle {
   font-size: 18px;
   margin: 0.2rem 0 1rem 0;
+  color: #ff5656;
 }
 .housing_page_header_infos_tags {
   display: flex;
@@ -288,6 +305,18 @@
   color: white;
   font-size: 15px;
   margin-bottom: 1.5rem;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat-Medium", sans-serif;
+}
+
+p, a, li {
+  font-family: "Montserrat-Regular", sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 @media (max-width: 768px) {
@@ -447,11 +476,31 @@
   width: 95%;
 }
 
-@font-face {
-  font-family: "Montserrat-Medium";
-  src: url("../fonts/Montserrat-Medium.ttf");
+@media (max-width: 768px) {
+  .error_page_title {
+    font-size: 160px !important;
+  }
+  .error_page_link {
+    margin-top: 5rem !important;
+  }
 }
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: url("../fonts/Montserrat-Regular.ttf");
+.error_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  color: #ff5656;
+}
+.error_page_title {
+  font-size: 250px;
+  margin: 0;
+  color: #ff5656;
+}
+.error_page_link {
+  margin-top: 3rem;
+  margin-bottom: 1.7rem;
+  text-decoration: underline;
+  color: #ff5656;
 }/*# sourceMappingURL=main.css.map */

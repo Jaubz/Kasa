@@ -19,15 +19,18 @@
     text-align: center;
     margin-top: 3rem;
     padding: 1rem;
+    color: $primary-color;
     
     &_title {
         font-size: 250px;
         margin: 0;
+        color: $primary-color;
     }
     
     &_link {
         margin-top: 3rem;
         margin-bottom: 1.7rem;
         text-decoration: underline;
+        color: $primary-color;
     }
 }

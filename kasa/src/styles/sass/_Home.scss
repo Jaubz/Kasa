@@ -1,5 +1,17 @@
-@import 'variables';
-
+@import '../sass/variables';
+h1,h2,h3{
+    font-family: "Montserrat-Medium",sans-serif;
+}
+p,a,li{
+    font-family: "Montserrat-Regular",sans-serif;
+}
+ul{
+    list-style: none;
+}
+// a{
+//     text-decoration: none;
+//     color: black;
+// }
 @media(max-width: 768px) {
     .housings {
         &_container {

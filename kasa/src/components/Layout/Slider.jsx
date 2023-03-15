@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import arrowLeft from '../../assets/arrow-left.png'
+import arrowRight from '../../assets/arrow-right.png'
 
-const angleLeft = <FontAwesomeIcon icon={faAngleLeft} />
-const angleRight = <FontAwesomeIcon icon={faAngleRight} />
+// const angleLeft = <FontAwesomeIcon icon={faAngleLeft} />
+// const angleRight = <FontAwesomeIcon icon={faAngleRight} />
 
-const Gallery = (props) => {
+const angleLeft = <img src={arrowLeft} alt="Flèche de gauche" />
+const angleRight = <img src={arrowRight} alt="Flèche de droite" />
+
+const Slider = (props) => {
     const [slideIdx, setSlideIdx] = useState(0);
     const imgSize = () => {
         const slideshowImg = document.querySelector('.slideshow_container img');
@@ -50,4 +55,4 @@ const Gallery = (props) => {
     )
 }
 
-export default Gallery;
+export default Slider;

@@ -1,21 +1,24 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import housings from '../../datas/logements.json';
-import Error404 from '../../pages/NoMatch';
 import Collapse from '../Layout/Collapse';
-import Gallery from '../Layout/Gallery';
+import Slider from '../Layout/Slider';
+import RatingScale from './RatingScale';
 
 const HousingPage = () => {
 
     const { id } = useParams()
     const housing = housings.find(housing => housing.id === id)
     if (housing === undefined) { 
-        return <Error404/>
+        return <section className="error_page">
+            <p className="error_page_subtitle">Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.</p>
+            <NavLink title='Accueil' to='/home' className="error_page_link">Retourner sur la page d'accueil</NavLink> 
+        </section>
     }
 
     return (
         <section key={housing.id} className='housing_page'>
-            <Gallery 
+            <Slider 
                 img={housing.pictures} 
             />
 
@@ -35,6 +38,7 @@ const HousingPage = () => {
                         <p className='housing_page_header_hoster_infos_name'>{housing.host.name}</p>
                         <img src={housing.host.picture} alt='host-cover' className='housing_page_header_hoster_infos_img'/>
                     </div>
+                    <RatingScale rating={housing.rating}/>
                 </article>
             </header>
 
