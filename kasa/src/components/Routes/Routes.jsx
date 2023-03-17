@@ -9,11 +9,11 @@ const IndexRoutes = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home />} exact />
                 <Route exact path="/home" element={<Home />} />
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/housing/:id" element={<Housing />} />
-                <Route exact path="/nomatch" element={<NoMatch />} />
+                <Route path="*" element={<NoMatch />} />
             </Routes>
         </BrowserRouter>
     )
